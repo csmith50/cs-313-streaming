@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>you will watch videos</title>
+</head>
+<body>
+	<h1>Watch videos free!</h1>
+	<% for(var i = 0; i < videos.length; i++) {
+		document.write("<a href=\"/" + videos[i].filename + "\"> " + videos[i].title + "/a>");	
+	}%>
+</body>
+</html>
