@@ -24,7 +24,7 @@ const PORT = process.env.PORT || 8080;
 const connectionString = process.env.DATABASE_URL;
 const pool = new Pool({connectionString: connectionString});
 
-var videos = getVideoList();
+app.locals.videos = getVideoList();
 
 express()
 	.use(express.static(path.join(__dirname, 'public')))
