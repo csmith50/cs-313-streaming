@@ -30,8 +30,8 @@ express()
 	.use(express.static(path.join(__dirname, 'public')))
 	.set('views', path.join(__dirname, 'views'))
   	.set('view engine', 'ejs')
-  	.get('/videos', (req, res) => res.render('landing', {videos}))
-  	.get('*', (req, res) => res.send("video not found", 404))
+  	.get('/', (req, res) => res.render('landing', {videos: videos}))
+  	.get('/*', (req, res) => res.render('video not found', 404))
   	.listen(process.env.PORT, () => {
   		console.log("Express listening");
   	})
