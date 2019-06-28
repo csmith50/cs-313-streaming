@@ -33,5 +33,5 @@ express()
   	.get('/videos', (req, res) => res.render('landing', {videos}))
   	.get('*', (req, res) => res.send("video not found", 404))
   	.listen(process.env.PORT, () => {
-  		console.log("Express listening";
+  		console.log("Express listening");
   	})
